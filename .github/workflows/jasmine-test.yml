@@ -16,3 +16,4 @@ jobs:
           node-version: '14'
       - run: npm install -g jasmine
       - run: jasmine -v
+      - run: jasmine caesar.spec.js
