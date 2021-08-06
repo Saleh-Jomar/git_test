@@ -5,7 +5,7 @@ describe('caesar', function() {
     expect(caesar('A', 1)).toEqual('B');
   });
   it('works with words', function() {
-    expect(caesar('Aaa', 1)).toEqual('Cbb');
+    expect(caesar('Aaa', 1)).toEqual('Bbb');
   });
   it('works with phrases', function() {
     expect(caesar('Hello, World!', 5)).toEqual('Mjqqt, Btwqi!');
