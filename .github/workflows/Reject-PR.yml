@@ -1,3 +1,5 @@
+name: Reject PR
+
 on:
   workflow_run:
     workflows: ["Build"]
