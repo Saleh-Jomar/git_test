@@ -3,8 +3,8 @@ name: Jasmine Test
 on:
   push:
     branches: [ main ]
-  pull_request_target:
-    types: [opened]
+  pull_request:
+    branches: [main]
     
 jobs:
   build-test:
