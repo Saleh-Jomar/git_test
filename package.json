@@ -1,0 +1,21 @@
+{
+  "name": "git_test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "npx jasmine caesar.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saleh-Jomar/git_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saleh-Jomar/git_test/issues"
+  },
+  "homepage": "https://github.com/Saleh-Jomar/git_test#readme",
+  "devDependencies": {
+    "jasmine": "^3.8.0"
+  }
+}
