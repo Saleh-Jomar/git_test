@@ -22,4 +22,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '10.21.0'
+      - run: yarn add typescript
       - run: yarn run lint
