@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn install
+      - name: yarn install
+        run: |
+          yarn install
       - uses: actions/upload-artifact@main
-      - with:
+        with:
           name: build artifacts
           path: public/
   test:
@@ -22,27 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@main
-      - with:
+        with: 
           name: build artifacts
           path: public
-      - uses: actions/setup-node@v2
-      - with:
+      - name: use nodejs
+        uses: actions/setup-node@v2
+        with:
           node-version: '10.21.0'
-      - run:
+        run: |
           yarn install
           yarn test
-  lint:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/download-artifact@main
-        with:
-          name: build artifacts
-          path: public
-      - uses: actions/setup-node@v2
-      - with:
-          node-version: '10.21.0'
-      - run:
-          yarn install
-          yarn lint
