@@ -1,11 +1,6 @@
 name: Jasmine Test
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [main]
-    
+on: pull_request
 jobs:
   build:
     runs-on: ubuntu-latest
